@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Fruit Game</title>
+  <link rel="icon" href="./favicon.ico?v=2" type="image/x-icon">
+  <link rel="shortcut icon" href="./favicon.ico?v=2" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="game-panel">
+      <h1>Memory Fruit Game</h1>
+      <p class="description">
+        Click a card to flip it. Find the two cards with the same fruit image.
+      </p>
+
+      <div class="status-card">
+        <div>
+          <p class="status-label">Attempts</p>
+          <strong id="try-count">0</strong>
+        </div>
+        <div>
+          <p class="status-label">Pairs</p>
+          <strong id="pair-count">0 / 8</strong>
+        </div>
+        <div>
+          <p class="status-label">Best Score</p>
+          <strong id="best-score">-</strong>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="shuffle-button" class="primary-button" type="button">New Game</button>
+      </div>
+
+      <div class="board-shell">
+        <div id="memory-board" class="board" aria-label="4 by 4 fruit card board"></div>
+      </div>
+
+      <p id="message" class="message" aria-live="polite">
+        Click a card to reveal a fruit image.
+      </p>
+    </section>
+  </main>
+
+  <dialog id="clear-dialog" class="clear-dialog">
+    <div class="dialog-content">
+      <p class="dialog-label">Clear</p>
+      <h2>Board Cleared</h2>
+      <p id="result-text">You cleared the puzzle.</p>
+      <button id="restart-button" class="primary-button" type="button">Play Again</button>
+    </div>
+  </dialog>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
