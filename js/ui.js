@@ -31,7 +31,7 @@ function createCardButton(card, onCardClick) {
   button.type = "button";
   button.dataset.id = card.id;
   button.style.setProperty("--card-accent", card.backColor);
-  button.setAttribute("aria-label", `${card.label} card`);
+  button.setAttribute("aria-label", `${card.label} 카드`);
   button.setAttribute("aria-pressed", String(card.isFaceUp));
 
   if (card.isMatched) {
@@ -86,7 +86,7 @@ export function saveBestScore(storageKey, attempts) {
 }
 
 export function showClearDialog(attempts, totalPairs) {
-  resultText.textContent = `You cleared all ${totalPairs} pairs in ${attempts} attempts.`;
+  resultText.textContent = `모든 ${totalPairs}쌍을 ${attempts}번 시도에 맞췄습니다.`;
   clearDialog.showModal();
 }
 

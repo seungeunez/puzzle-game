@@ -1,4 +1,4 @@
-import { PAIR_MISMATCH_DELAY, STORAGE_KEY } from "./config.js";
+import { PAIR_MISMATCH_DELAY, STORAGE_KEY, BOARD_SIZE } from "./config.js";
 import { fruitCatalog } from "./fruits.js";
 import { gameState, resetGameState } from "./state.js";
 import {
@@ -9,10 +9,12 @@ import {
   showClearDialog,
 } from "./ui.js";
 
+const activeFruits = fruitCatalog.slice(0, BOARD_SIZE * BOARD_SIZE / 2);
+
 export function startNewGame() {
   resetGameState(buildDeck());
-  updateScoreboard(gameState.attempts, gameState.matchedPairs, fruitCatalog.length);
-  setMessage("카드를 클릭해서 같은 이미지의 과일을 맞추세요.", false);
+  updateScoreboard(gameState.attempts, gameState.matchedPairs, activeFruits.length);
+  setMessage("카드를 클릭해서 같은 과일을 맞춰보세요.", false);
   renderBoard(gameState.cards, handleCardClick);
 }
 
@@ -31,17 +33,17 @@ export function handleCardClick(cardId) {
   renderBoard(gameState.cards, handleCardClick);
 
   if (gameState.selectedCardIds.length === 1) {
-    setMessage("같은 과일 이미지를 찾기 위해 하나 더 카드를 클릭하세요.", false);
+    setMessage("같은 과일이 나오는 두 번째 카드를 선택하세요.", false);
     return;
   }
 
   gameState.attempts += 1;
-  updateScoreboard(gameState.attempts, gameState.matchedPairs, fruitCatalog.length);
+  updateScoreboard(gameState.attempts, gameState.matchedPairs, activeFruits.length);
   resolveSelection();
 }
 
 function buildDeck() {
-  const duplicatedCards = fruitCatalog.flatMap((fruit) => [
+  const duplicatedCards = activeFruits.flatMap((fruit) => [
     createCard(fruit),
     createCard(fruit),
   ]);
@@ -122,20 +124,20 @@ function markPairAsMatched(firstCard, secondCard) {
   gameState.selectedCardIds = [];
   gameState.matchedPairs += 1;
 
-  updateScoreboard(gameState.attempts, gameState.matchedPairs, fruitCatalog.length);
+  updateScoreboard(gameState.attempts, gameState.matchedPairs, activeFruits.length);
   renderBoard(gameState.cards, handleCardClick);
 
-  if (gameState.matchedPairs === fruitCatalog.length) {
+  if (gameState.matchedPairs === activeFruits.length) {
     handleClear();
     return;
   }
 
-  setMessage("짝 맞추기 성공! 계속하세요.", true);
+  setMessage("짝을 찾았습니다! 계속하세요.", true);
 }
 
 function scheduleMismatchReset(firstId, secondId) {
   gameState.isLocked = true;
-  setMessage("땡!!!!!!!!!!!!!!!!!!", false);
+  setMessage("틀렸습니다. 다시 시도해 보세요.", false);
 
   window.setTimeout(() => {
     hideCard(firstId);
@@ -148,6 +150,6 @@ function scheduleMismatchReset(firstId, secondId) {
 
 function handleClear() {
   saveBestScore(STORAGE_KEY, gameState.attempts);
-  setMessage(`All ${fruitCatalog.length} identical fruit image pairs matched.`, true);
-  showClearDialog(gameState.attempts, fruitCatalog.length);
+  setMessage("모든 짝을 찾았습니다!", true);
+  showClearDialog(gameState.attempts, activeFruits.length);
 }

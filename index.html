@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>과일 카드 게임</title>
+  <title>4x4 과일 카드 게임</title>
   <link rel="icon" href="./favicon.ico?v=2" type="image/x-icon">
   <link rel="shortcut icon" href="./favicon.ico?v=2" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css">
@@ -11,9 +11,9 @@
 <body>
   <main class="app">
     <section class="game-panel">
-      <h1>과일 카드 게임</h1>
+      <h1>과일 카드 짝맞추기</h1>
       <p class="description">
-        카드를 클릭해서 뒤집으세요. 같은 과일이 나오는 카드를 찾으면 점수를 얻습니다. 모든 카드를 맞추면 게임이 끝납니다.
+        카드를 클릭해서 뒤집고, 같은 과일이 나오는 짝을 찾으세요. 16장 중 8쌍을 맞추면 게임 클리어입니다.
       </p>
 
       <div class="status-card">
@@ -23,10 +23,10 @@
         </div>
         <div>
           <p class="status-label">짝 맞춘 개수</p>
-          <strong id="pair-count">0 / 18</strong>
+          <strong id="pair-count">0 / 8</strong>
         </div>
         <div>
-          <p class="status-label">최고 점수</p>
+          <p class="status-label">최고 기록</p>
           <strong id="best-score">-</strong>
         </div>
       </div>
@@ -36,21 +36,21 @@
       </div>
 
       <div class="board-shell">
-        <div id="memory-board" class="board" aria-label="6 by 6 fruit card board"></div>
+        <div id="memory-board" class="board" aria-label="4 by 4 fruit card board"></div>
       </div>
 
       <p id="message" class="message" aria-live="polite">
-        카드를 클릭해서 과일 이미지를 확인하세요.
+        카드를 클릭해서 같은 과일을 찾아보세요.
       </p>
     </section>
   </main>
 
   <dialog id="clear-dialog" class="clear-dialog">
     <div class="dialog-content">
-      <p class="dialog-label">Clear</p>
+      <p class="dialog-label">완료</p>
       <h2>게임 클리어</h2>
       <p id="result-text">완료!</p>
-      <button id="restart-button" class="primary-button" type="button">Play Again</button>
+      <button id="restart-button" class="primary-button" type="button">다시 시작</button>
     </div>
   </dialog>
 
