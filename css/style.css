@@ -144,9 +144,7 @@ button:hover {
 }
 
 .card-back {
-  background:
-    radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.4), transparent 26%),
-    linear-gradient(135deg, var(--card-accent, var(--card-back-a)), var(--card-back-b));
+  background: #ff9e67;
 }
 
 .card-mark {
