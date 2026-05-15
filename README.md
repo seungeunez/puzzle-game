@@ -2,6 +2,8 @@
 
 이 게임은 `4x4` 크기의 과일 카드 맞추기 게임이에요.
 
+URL: https://puzzle-game-lyart-gamma.vercel.app/
+
 ## 게임 설명
 
 - 모두 16장의 카드가 있어요.
