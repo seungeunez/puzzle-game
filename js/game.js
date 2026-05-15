@@ -12,7 +12,7 @@ import {
 export function startNewGame() {
   resetGameState(buildDeck());
   updateScoreboard(gameState.attempts, gameState.matchedPairs, fruitCatalog.length);
-  setMessage("Click a card to reveal a fruit image.", false);
+  setMessage("카드를 클릭해서 같은 이미지의 과일을 맞추세요.", false);
   renderBoard(gameState.cards, handleCardClick);
 }
 
@@ -31,7 +31,7 @@ export function handleCardClick(cardId) {
   renderBoard(gameState.cards, handleCardClick);
 
   if (gameState.selectedCardIds.length === 1) {
-    setMessage("Pick one more card to find the same fruit image.", false);
+    setMessage("같은 과일 이미지를 찾기 위해 하나 더 카드를 클릭하세요.", false);
     return;
   }
 
@@ -130,12 +130,12 @@ function markPairAsMatched(firstCard, secondCard) {
     return;
   }
 
-  setMessage("Matched. Keep going.", true);
+  setMessage("짝 맞추기 성공! 계속하세요.", true);
 }
 
 function scheduleMismatchReset(firstId, secondId) {
   gameState.isLocked = true;
-  setMessage("Different image. Remember the positions.", false);
+  setMessage("땡!!!!!!!!!!!!!!!!!!", false);
 
   window.setTimeout(() => {
     hideCard(firstId);
