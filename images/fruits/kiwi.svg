@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Kiwi">
+  <rect width="200" height="200" rx="24" fill="#fffdf8"/>
+  <circle cx="100" cy="100" r="58" fill="#8c5f3d"/>
+  <circle cx="100" cy="100" r="46" fill="#b8d95b"/>
+  <circle cx="100" cy="100" r="12" fill="#f6f3df"/>
+  <g fill="#2f261f">
+    <circle cx="100" cy="58" r="3"/>
+    <circle cx="128" cy="72" r="3"/>
+    <circle cx="142" cy="100" r="3"/>
+    <circle cx="128" cy="128" r="3"/>
+    <circle cx="100" cy="142" r="3"/>
+    <circle cx="72" cy="128" r="3"/>
+    <circle cx="58" cy="100" r="3"/>
+    <circle cx="72" cy="72" r="3"/>
+  </g>
+</svg>

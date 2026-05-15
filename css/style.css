@@ -26,7 +26,7 @@ body {
 }
 
 .app {
-  width: min(640px, calc(100vw - 1rem));
+  width: min(860px, calc(100vw - 1rem));
   margin: 0 auto;
   padding: 1rem 0 2rem;
 }
@@ -103,14 +103,14 @@ button:hover {
 }
 
 .board {
-  width: min(92vw, 560px);
+  width: min(94vw, 760px);
   aspect-ratio: 1;
   padding: 0.6rem;
   border-radius: 12px;
   background: #f3ede3;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.6rem;
+  grid-template-columns: repeat(var(--board-size, 4), 1fr);
+  gap: 0.45rem;
   border: 1px solid #e0d6c8;
 }
 
@@ -150,8 +150,8 @@ button:hover {
 }
 
 .card-mark {
-  width: 56%;
-  height: 56%;
+  width: 52%;
+  height: 52%;
   border-radius: 999px;
   display: grid;
   place-items: center;
@@ -163,7 +163,7 @@ button:hover {
   content: "?";
   color: #fffaf1;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-size: clamp(1.25rem, 3.4vw, 2.3rem);
   font-weight: 700;
   line-height: 1;
 }
@@ -250,8 +250,8 @@ button:hover {
   }
 
   .board {
-    width: min(95vw, 430px);
-    gap: 0.45rem;
+    width: min(96vw, 540px);
+    gap: 0.3rem;
   }
 
   .memory-card,

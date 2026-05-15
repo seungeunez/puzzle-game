@@ -18,6 +18,7 @@ export function bindStaticEvents({ onNewGame, onRestart }) {
 export function renderBoard(cards, onCardClick) {
   boardElement.innerHTML = "";
   boardElement.style.setProperty("--board-size", String(BOARD_SIZE));
+  boardElement.setAttribute("aria-label", `${BOARD_SIZE} by ${BOARD_SIZE} fruit card board`);
 
   cards.forEach((card) => {
     boardElement.appendChild(createCardButton(card, onCardClick));
@@ -84,8 +85,8 @@ export function saveBestScore(storageKey, attempts) {
   }
 }
 
-export function showClearDialog(attempts) {
-  resultText.textContent = `You cleared all 8 pairs in ${attempts} attempts.`;
+export function showClearDialog(attempts, totalPairs) {
+  resultText.textContent = `You cleared all ${totalPairs} pairs in ${attempts} attempts.`;
   clearDialog.showModal();
 }
 

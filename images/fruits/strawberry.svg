@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Strawberry">
+  <rect width="200" height="200" rx="24" fill="#fffdf8"/>
+  <path d="M100 52 C134 52, 150 79, 146 104 C141 133, 120 156, 100 156 C80 156, 59 133, 54 104 C50 79, 66 52, 100 52 Z" fill="#ee586e"/>
+  <path d="M100 48 L112 58 L100 60 L88 58 Z" fill="#5fae59"/>
+  <path d="M76 60 L86 72 L72 72 L64 80 Z" fill="#5fae59"/>
+  <path d="M124 60 L136 80 L124 72 L110 72 Z" fill="#5fae59"/>
+  <g fill="#ffd97a">
+    <circle cx="86" cy="88" r="3"/>
+    <circle cx="112" cy="88" r="3"/>
+    <circle cx="74" cy="104" r="3"/>
+    <circle cx="98" cy="104" r="3"/>
+    <circle cx="122" cy="104" r="3"/>
+    <circle cx="86" cy="122" r="3"/>
+    <circle cx="112" cy="122" r="3"/>
+  </g>
+</svg>

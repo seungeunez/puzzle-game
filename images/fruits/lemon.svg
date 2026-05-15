@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Lemon">
+  <rect width="200" height="200" rx="24" fill="#fffdf8"/>
+  <path d="M54 100 C54 68, 78 48, 106 48 C142 48, 156 76, 156 100 C156 124, 142 152, 106 152 C78 152, 54 132, 54 100 Z" fill="#f6d54e"/>
+  <path d="M102 48 C112 34, 129 30, 142 38" fill="none" stroke="#7ab75b" stroke-width="8" stroke-linecap="round"/>
+</svg>

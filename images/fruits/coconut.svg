@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Coconut">
+  <rect width="200" height="200" rx="24" fill="#fffdf8"/>
+  <circle cx="82" cy="108" r="42" fill="#8d623d"/>
+  <path d="M110 122 C110 88, 134 68, 158 68 C158 100, 158 126, 142 144 C130 156, 114 152, 110 122 Z" fill="#8d623d"/>
+  <path d="M116 122 C116 96, 134 80, 152 80 C152 102, 152 120, 140 134 C131 143, 120 140, 116 122 Z" fill="#fffaf0"/>
+</svg>

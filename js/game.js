@@ -148,6 +148,6 @@ function scheduleMismatchReset(firstId, secondId) {
 
 function handleClear() {
   saveBestScore(STORAGE_KEY, gameState.attempts);
-  setMessage("All 8 identical fruit image pairs matched.", true);
-  showClearDialog(gameState.attempts);
+  setMessage(`All ${fruitCatalog.length} identical fruit image pairs matched.`, true);
+  showClearDialog(gameState.attempts, fruitCatalog.length);
 }

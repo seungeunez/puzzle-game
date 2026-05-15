@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Pineapple">
+  <rect width="200" height="200" rx="24" fill="#fffdf8"/>
+  <path d="M100 34 L116 54 L100 52 L84 54 Z" fill="#5aa75e"/>
+  <path d="M78 48 L92 68 L76 66 L62 68 Z" fill="#5aa75e"/>
+  <path d="M122 48 L138 68 L124 66 L108 68 Z" fill="#5aa75e"/>
+  <path d="M72 84 C72 60, 128 60, 128 84 L128 132 C128 150, 72 150, 72 132 Z" fill="#efc85a"/>
+  <g stroke="#c7982d" stroke-width="4">
+    <line x1="76" y1="92" x2="124" y2="140"/>
+    <line x1="124" y1="92" x2="76" y2="140"/>
+    <line x1="72" y1="108" x2="128" y2="108"/>
+    <line x1="72" y1="124" x2="128" y2="124"/>
+  </g>
+</svg>

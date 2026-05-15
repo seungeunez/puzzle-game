@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Watermelon">
+  <rect width="200" height="200" rx="24" fill="#fffdf8"/>
+  <path d="M46 126 A54 54 0 0 1 154 126 Z" fill="#ef6274"/>
+  <path d="M40 126 A60 60 0 0 1 160 126" fill="none" stroke="#65c46b" stroke-width="12" stroke-linecap="round"/>
+  <g fill="#2f261f">
+    <ellipse cx="76" cy="112" rx="3" ry="5"/>
+    <ellipse cx="100" cy="102" rx="3" ry="5"/>
+    <ellipse cx="124" cy="112" rx="3" ry="5"/>
+  </g>
+</svg>
